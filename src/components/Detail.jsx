@@ -8,7 +8,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import { Typography, Card, CardActions, CardContent } from "@material-ui/core";
 import io from "socket.io-client";
-import { URL } from "../api";
+import { URL, WS } from "../api";
 import ReactLoading from "react-loading";
 
 const useStyles = makeStyles((theme) => ({

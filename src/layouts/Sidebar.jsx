@@ -11,15 +11,15 @@ import Routes from "../routes";
 import { NavLink, withRouter } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import useStyles from './styles';
-import {useDispatch, useSelector} from 'react-redux';
-import { open, close } from '../store/sidebar';
-import { setTitle } from '../store/appbar';
+import useStyles from "./styles";
+import { useDispatch, useSelector } from "react-redux";
+import { open, close } from "../store/sidebar";
+import { setTitle } from "../store/appbar";
 
 const Sidebar = () => {
   const classes = useStyles();
-  const dispatch = useDispatch()
-  const { status } = useSelector(state => state.sidebar);
+  const dispatch = useDispatch();
+  const { status } = useSelector((state) => state.sidebar);
 
   const list = () => (
     <div>
@@ -41,7 +41,15 @@ const Sidebar = () => {
             </NavLink>
           );
         })}
+
+        {/* <ListItem button>
+          <ListItemIcon onClick={()=> localStorage.removeItem('token')}>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText primary={"Logout"} />
+        </ListItem> */}
       </List>
+
       <Divider />
     </div>
   );
